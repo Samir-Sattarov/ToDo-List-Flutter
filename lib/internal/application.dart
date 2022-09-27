@@ -1,9 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../presentations/screens/home_screen.dart';
+import '../presentations/utils/color_helper.dart';
 
 class Application extends StatelessWidget {
   const Application({Key? key}) : super(key: key);
@@ -14,8 +13,7 @@ class Application extends StatelessWidget {
       title: 'ToDo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch:
-            Colors.primaries[Random().nextInt(Colors.primaries.length)],
+        primarySwatch: ColorHelper().generateColor(),
         textTheme: GoogleFonts.montserratAlternatesTextTheme(),
         scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,

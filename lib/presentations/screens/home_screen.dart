@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../data/entity/todo_entity.dart';
 import '../utils/color_helper.dart';
 import '../widgets/todo_card_widget.dart';
+import 'add_todo_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,7 +23,9 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(AddTodoScreen.route());
+            },
             child: const Text('New todo'),
           ),
         ],
